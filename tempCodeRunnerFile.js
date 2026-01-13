@@ -1,11 +1,19 @@
-function turn(){
-    let str = "a=1,b=2";
-    
-    let res = Object.fromEntries(
-        str.split(",").map(pair => pair.split("="))
-    );
+function flatten(){
+    const obj = {
+        a: { 
+            b: 1
+        }
+    };
+    const res = {};
+    for(let key in obj){
+        if(typeof obj[key] == "object" && obj[key] !== null){
+            for(let innerKey in obj[key]){
+                res[`${key}.${innerKey}`] = obj[key][innerKey]
+            }
+        }else{
+                res[key] = obj[key];
+            }
+    }
     return res;
-
-    
 }
-console.log(turn());
+console.log(flatten());
