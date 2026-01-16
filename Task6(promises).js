@@ -1,3 +1,4 @@
+
 // task 1 = Create a function that returns a Promise and resolves after 2 seconds with the message "Hello after delay".
 function greet(){
     return new Promise((resolve)=>{
@@ -141,7 +142,7 @@ function order(item){
             }
     })
 }
-order("pizzaaa").then((msg) =>{
+order("pizza").then((msg) =>{
     console.log(msg);
 }).catch((err) => {
     console.log(err);
