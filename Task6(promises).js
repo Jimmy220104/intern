@@ -141,7 +141,7 @@ function order(item){
             }
     })
 }
-order("pizza").then((msg) =>{
+order("pizzaa").then((msg) =>{
     console.log(msg);
 }).catch((err) => {
     console.log(err);
