@@ -25,7 +25,10 @@
 // let year = date1.getFullYear();
 // let hour = date1.getHours();
 // let minutes = date1.getMinutes();
-// let amPm = hour >= 12 ? "PM" : "AM";
+// let amPm = 
+//      hour >= 12 ? "PM" : "AM";
+        // hour = hour % 12 || 12;
+
 
 // console.log(`${day} ${month1} ${year} ${hour}:${minutes} ${amPm}`);
 
@@ -77,7 +80,9 @@ function time(date1){
     let year = date1.getFullYear();
     let hour = date1.getHours();
     let minutes = date1.getMinutes();
-    let amPm = hour >= 12 ? "PM" : "AM";
+    let amPm = 
+            hour >= 12 ? "PM" : "AM";
+            hour = hour % 12 || 12;
 
     return `${day} ${month1} ${year} ${hour}:${minutes} ${amPm}`;
 }
